@@ -19,6 +19,10 @@ export default function RootLayout({
 }>) {
   const menuItems = [
     {
+      path: '/',
+      name: 'Home'
+    },
+    {
       path: '/director',
       name: 'Director'
     },

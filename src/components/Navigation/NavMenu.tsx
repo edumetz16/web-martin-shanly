@@ -11,7 +11,7 @@ export const NavMenu = ({items, children}:{ items: MenuItem[], children?: React.
   return <>
     {items.map((item, i)=>(
 
-      <Link key={i} href={item.path} className={`${currentPath.startsWith(item.path)?'underline text-zinc-900':'text-zinc-600'}`}>{item.name}</Link>
+      <Link key={i} href={item.path} className={`${currentPath === item.path?'underline text-zinc-900':'text-zinc-400'} hover:text-zinc-600`}>{item.name}</Link>
     ))}
   </>
 }
