@@ -39,14 +39,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={bitter.className}>
         <header className="flex flex-col items-center justify-between px-6 pt-6 md:px-24 md:pt-24">
-          <div className="z-10 max-w-5xl w-full items-start justify-start font-mono text-sm lg:flex flex-col gap-10">
+          <div className="z-10 max-w-5xl w-full items-start justify-start font-mono text-sm flex flex-col gap-6">
             <Link href={"/"}>
               <div className="flex gap-4 items-center">
                 <Image alt="Martín Shanly" src={`/img/avatar.jpg`} className="rounded-full" width={50} height={50}/>
-                <h1 className="text-3xl font-bold">Martín Shanly</h1>
+                <h1 className="text-xl md:text-3xl font-bold">Martín Shanly</h1>
               </div>
             </Link>
-            <div className="w-full flex justify-end items-end gap-2">
+            <div className="w-full flex md:justify-end items-end gap-2">
               <NavMenu items={menuItems}></NavMenu>
               
             </div>
