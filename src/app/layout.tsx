@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bitter.className}>
-        <header className="flex flex-col items-center justify-between px-24 pt-24">
+        <header className="flex flex-col items-center justify-between px-6 pt-6 md:px-24 md:pt-24">
           <div className="z-10 max-w-5xl w-full items-start justify-start font-mono text-sm lg:flex flex-col gap-10">
             <Link href={"/"}>
               <div className="flex gap-4 items-center">
