@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Bitter, Inter } from "next/font/google";
+import "./globals.scss";
+import Link from "next/link";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
+const bitter = Bitter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bitter.className}>
+        <header className="flex flex-col items-center justify-between px-24 pt-24">
+          <div className="z-10 max-w-5xl w-full items-start justify-start font-mono text-sm lg:flex flex-col gap-10">
+            <Link href={"/"}>
+              <div className="flex gap-4 items-center">
+                <Image alt="Martín Shanly" src={`/img/avatar.jpg`} className="rounded-full" width={50} height={50}/>
+                <h1 className="text-3xl font-bold">Martín Shanly</h1>
+              </div>
+            </Link>
+            <div className="w-full flex justify-end items-end gap-2">
+              <Link href={"/director"} className="underline">Director</Link>
+              <Link href={"a"} className="underline">Writer</Link>
+              <Link href={"a"} className="underline">Actor</Link>
+            </div>
+            
+            
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
