@@ -3,6 +3,7 @@ import { Bitter, Inter } from "next/font/google";
 import "./globals.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { NavMenu } from "@/components/Navigation/NavMenu";
 
 const bitter = Bitter({ subsets: ["latin"] });
 
@@ -16,6 +17,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const menuItems = [
+    {
+      path: '/director',
+      name: 'Director'
+    },
+    {
+      path: '/writer',
+      name: 'Writer'
+    },
+    {
+      path: '/actor',
+      name: 'Actor'
+    },
+  ]
   return (
     <html lang="en">
       <body className={bitter.className}>
@@ -28,9 +43,8 @@ export default function RootLayout({
               </div>
             </Link>
             <div className="w-full flex justify-end items-end gap-2">
-              <Link href={"/director"} className="underline">Director</Link>
-              <Link href={"a"} className="underline">Writer</Link>
-              <Link href={"a"} className="underline">Actor</Link>
+              <NavMenu items={menuItems}></NavMenu>
+              
             </div>
             
             
